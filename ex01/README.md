@@ -1,5 +1,5 @@
 ## make 編譯檔案命令
-代碼中看到的部分[tag:target]
+代碼中看到的部分[tag:Dependency]
 
 ```make
 resule: main.exe
@@ -8,7 +8,7 @@ resule: main.exe
 
 舉這個例子來說 [tag:cmd]
 tag = main.exe
-target = main.o fun.o
+Dependency = main.o fun.o
 
 
 
@@ -27,7 +27,7 @@ make resule
 
 
 
-### target
+### Dependency
 這裡的內容可以是tag也可以是檔案名稱，如果是tag那麼就會等到這個tag執行完畢在執行，如果是檔案名稱就會順便一起檢查檔案有效性。
 
 有效性的有效指的是這個檔案存在且沒有被更動，那麼就不執行裡面的命令；反之則執行底下令命。
@@ -43,5 +43,5 @@ main.exe: main.o fun.o
 mainTag: main.o fun.o main.exe
 ```
 
-兩個是同樣的意思，前者在target的部分，可以省略檔案名稱，這樣應該比較好理解。(要補上比較完整也是可以的)
+兩個是同樣的意思，前者在Dependency的部分，可以省略檔案名稱，這樣應該比較好理解。(要補上比較完整也是可以的)
 
